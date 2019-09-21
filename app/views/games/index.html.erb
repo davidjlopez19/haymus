@@ -1,10 +1,14 @@
 <h1>Welcome to my Game Rating app</h1>
 
 <% @games.each do |game| %>
-  <div>
+  <div class="booyah-box col-10 offset-1">
     <h1><%= game.name %></h1><br />
-    <i><%= game.address %></i><br />
+    <i><%= game.rating %></i><br />
     <p><%= game.description %></p><br />
+
+    <% if game.user.present? %>
+        <small><%= game.user.email %></small>
+    <% end %>   
   </div>
 
   <hr />
