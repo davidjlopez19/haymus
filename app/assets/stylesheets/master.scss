@@ -4,16 +4,61 @@
     -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
     -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
     box-shadow: 1px 1px 2px 0 #d0d0d0;
-    background: #fff;
+    background: rgb(26, 29, 28);
     border: 1px solid #ccc;
     border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
     margin-top: 10px;
     margin-bottom: 15px;
     padding: 20px;
+    border-radius: 10px;
+    text-decoration-color: #fff
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    margin:0;
-    padding:0;
-    color: #FF5733;
+h1 {
+  font-size: 25px;
+  color: #fff;
+}
+
+h2, h3, h4, h5, h6 {
+  margin:0;
+  padding:0;
+  color: rgb(255, 255, 255);
+}
+
+body {
+  background-color:#7F8C8D;
+  color: #fff;
+}
+
+.games {
+  /* this is needed for the parent 
+      to have height. read more 
+      http://css-tricks.com/all-about-floats/
+  */
+  overflow:hidden;
+  /* adjust width of this element
+      if its width is not limited by its parent
+  width: 300px;
+  */
   }
+    .games li {
+        /* add margins and paddings as you wish */
+        float:left;
+        margin: 10px;
+        width: 300px;
+        height: 525px;
+    }
+
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-toggle{
+  color: #FF5733;
+}
+
+.nav-logo {
+    margin-left: 25px;
+    margin-top: 5px;
+  }
+
+.img-fluid {
+  border-radius: 15px;
+}

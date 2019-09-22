@@ -14,16 +14,22 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <%= link_to 'Haymus Game Hub', root_path, class: 'navbar-brand' %>
+      <%= link_to "Haymus's Game Hub", root_path, class: 'navbar-brand' %>
  
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
           <li class="nav-item active">
             <%= link_to '+Review Game', new_game_path, class: 'nav-link' %>
-          </li>
+          </li>           
           <li class="nav-item">
-            <a class="nav-link" href="https://twitch.tv">Watch Your Favorite Streamer</a>
+            <%# <a><--Watch Your Favorite Streamer</a> %>
+            <%= link_to href="https://twitch.tv" do %>
+              <%= image_tag("Glitch_Purple_RGB.png", :alt => "image-logo", size: "25x25", class: "nav-logo") %>
+            <% end %>
           </li>
+          <%# <li class="nav-item active">
+            <a><--Watch Your Favorite Streamer</a>
+          </li>  %>
         </ul>
         <%# <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search">

@@ -1,16 +1,19 @@
-<h1 class="text-center">Welcome to my Game Rating app</h1>
+<h2 class="text-center">Welcome Haymus's Game Hub</h2>
 <br />
-
-<% @games.each do |game| %>
-  <div class="booyah-box col-10 offset-1">
-    <h1><%= game.name %></h1><br />
-    <i><%= game.rating %></i><br />
-    <p><%= game.description %></p><br />
-
-    <% if game.user.present? %>
-        <small><%= game.user.email %></small>
-    <% end %>   
-  </div>
-
-  <hr />
-<% end %>
+<%# <% unless @games.empty? %>
+  <ul class= "games">
+    <% @games.each do |game| %>
+        <li class= "booyah-box" >
+        <h1 class= "text-center"><%= game.name %></h1>
+        <%= image_tag game.picture.url, class: 'img-fluid' %>
+        <i><%= game.rating %></i><br />
+        <p><%= game.description %></p>
+        <div class= "text-center">
+        <% if game.user.present? %>
+            <small><%= game.user.email %></small>
+        <% end %> 
+        </div>
+        </li> 
+    <% end %>
+  </ul>
+<%# <% end %> 

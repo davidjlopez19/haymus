@@ -54,7 +54,7 @@ class GamesController < ApplicationController
   private
 
   def game_params
-    params.require(:game).permit(:name, :rating, :description,)
+    params.require(:game).permit(:name, :rating, :description, :picture)
   end
 
   def render_not_found(status=:not_found)

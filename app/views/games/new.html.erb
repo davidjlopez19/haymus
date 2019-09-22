@@ -1,9 +1,10 @@
 <div class="booyah-box col-10 offset-1">
   <h1>Enter Your Game Details</h1>
   <%= simple_form_for @game do |f| %>
-    <%= f.input :name %>
-    <%= f.input :rating %>
-    <%= f.input :description %>
+    <%= f.input :picture %>
+    <%= f.input :name, placeholder: "Enter the name of Game" %>
+    <%= f.input :rating, placeholder: "Enter rating out of 10 - Example 9 out of 10" %>
+    <%= f.input :description, placeholder: "Enter a brief review of the game (max charaters 50)", :input_html => {:maxlength => 50, :size => 40} %>
     <br />
     <%= f.submit 'Create', class: 'btn btn-primary' %>
   <% end %>
