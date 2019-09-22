@@ -4,15 +4,17 @@
   <ul class= "games">
     <% @games.each do |game| %>
         <li class= "booyah-box" >
-        <h1 class= "text-center"><%= game.name %></h1>
-        <%= image_tag game.picture.url, class: 'img-fluid' %>
-        <i><%= game.rating %></i><br />
-        <p><%= game.description %></p>
-        <div class= "text-center">
-        <% if game.user.present? %>
-            <small><%= game.user.email %></small>
-        <% end %> 
-        </div>
+          <h1 class= "text-center"><%= game.name %></h1>
+          <% if game.picture.url %>
+            <%= image_tag game.picture.url, class: 'img-fluid' %>
+          <% end %>
+          <i><%= game.rating %></i><br />
+          <p><%= game.description %></p>
+          <div class= "text-center">
+            <% if game.user.present? %>
+                <small><%= game.user.email %></small>
+            <% end %> 
+          </div>
         </li> 
     <% end %>
   </ul>
